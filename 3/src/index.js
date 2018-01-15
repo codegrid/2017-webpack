@@ -1,5 +1,5 @@
 import helloContainer from './lib/hello-container';
-import './assets/index.less';
+import './assets/index.scss';
 
 const app = document.getElementById('app');
 
