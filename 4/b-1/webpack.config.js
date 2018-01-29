@@ -1,6 +1,5 @@
 const path = require('path');
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -28,7 +27,7 @@ module.exports = {
         }
       },
       {
-        test: /\.scss$/,
+        test: /\.scss/,
         use: [
           {loader: 'style-loader'},
           {loader: 'css-loader'},
@@ -38,6 +37,10 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin()
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "shared", // チャンク名
+      minChunks: 2,
+      // minSize: 10000, // チャンク作成のための最低サイズ
+    })
   ]
 };
