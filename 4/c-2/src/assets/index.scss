@@ -1,9 +1,9 @@
 $color: #4D926F;
 
-#app {
+:global(#app) {
   color: $color;
 }
 
-:local(.title) {
+.title {
   background-color: #faebd7;
 }

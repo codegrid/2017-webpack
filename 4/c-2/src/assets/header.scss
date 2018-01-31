@@ -1,9 +1,9 @@
 $color: #842210;
 
-header {
+:global(header) {
   color: $color;
 }
 
-:local(.title) {
+.title {
   background-color: #dcdcdc;
 }
