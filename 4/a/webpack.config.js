@@ -1,6 +1,6 @@
 const path = require('path');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const webpack = require('webpack'); // webpackのライブラリを読み込みます
 
 module.exports = {
   entry: {
@@ -38,6 +38,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin()
+    new webpack.optimize.UglifyJsPlugin()
   ]
 };
